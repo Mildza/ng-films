@@ -1,0 +1,44 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8" />
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/app.js"></script>
+		<link rel="stylesheet" type="text/css"href="css/style.css">
+		<title>Filmovi</title>
+</head>
+<body>
+	<div  ng-controller="movies">
+		<div class="container">
+			<div class="page-header">
+			  <h1>Mildza's Movies</h1>
+			  <p>watch, search, comment</p>
+			</div>
+			<table class="table table-responsive table-bordered table-condesed table-hover table-striped">
+				<tr>
+			    <th ng-click="orderByMe('glumci')">Glumci</th>
+			    <th ng-click="orderByMe('zanr')">Zanr</th>
+			    <th ng-click="orderByMe('naziv')">Film</th>
+					<th ng-click="orderByMe('ocena')">Ocena</th>
+					<th ng-click="orderByMe('utisak')">Utisak</th>
+					<th ng-click="orderByMe('komentar')">Komentar</th>
+					<th ng-click="orderByMe('br.komentar')">br.</th>
+			  </tr>
+			  <tr ng-repeat="x in filmovi | orderBy:myOrderBy">
+					<td>{{ x.glumci }}</td>
+					<td>{{ x.zanr }}</td>
+					<td>{{ x.naziv | uppercase }}</td>
+					<td>{{ x.ocena }}</td>
+					<td>{{ x.utisak }}</td>
+					<td>{{ x.komentar }}</td>
+					<td>{{ x.br_komentara }}</td>
+			  </tr>
+			</table>
+		</div>
+	</div>
+
+</body>
+</html>
