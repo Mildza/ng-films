@@ -31,7 +31,7 @@
 			  </tr>
 			  <tr ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText">
 					<td>{{ x.glumci }}</td>
-					<td>{{ x.zanr }}</td>
+					<td><img src="images/{{ genre(x.zanr) }}.png" alt=""></td>
 					<td>{{ x.naziv | uppercase }}</td>
 					<td>{{ x.ocena }}</td>
 					<td>{{ x.utisak }}</td>
