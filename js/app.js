@@ -1,10 +1,15 @@
 
-var app = angular.module('myApp', ['ngSanitize']);
+var app = angular.module('myApp', ['ngSanitize']).config(function($sceProvider) {
+  // Completely disable SCE.  For demonstration purposes only!
+  // Do not use in new projects.
+  $sceProvider.enabled(false);
+});
 
 
 app.controller('movies', function($scope, $http, $sce) {
     $http.get("http://mildza.freehostia.com/filmovi.php")
     .then(function (response) {$scope.filmovi = response.data.records;});
+
 
 $scope.by = "br.komentara";
 $scope.reverse = false;
@@ -17,20 +22,19 @@ $scope.orderByMe = function(by) {
       var niz = z.split(" ");
       // console.log(niz);
       var y = niz.length;
-      var val="";
+    $scope.val=[];
       if ( y > 1 ) {
         for (var i = 0; i < y; i++) {
           if (niz[i] == "akcija") {
-          val = "<img ng-src='images/akcija.png'>";
+          $scope.val.push(niz[i]);
         } else if (niz[i] == "komedija") {
-          val += "<img ng-src='images/komedija.png'>";
+          $scope.val.push(niz[i]);
         } else if (niz[i] == "triler") {
-          val += "<img ng-src='images/triler.png'>";
+          $scope.val.push(niz[i]);
         }
         };
-        val = $sce.trustAsHtml(val);
-
-          return (val);
+        // console.log(val);
+        //return ($scope.val);
 
       };
   };

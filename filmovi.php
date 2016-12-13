@@ -1,6 +1,6 @@
 <?php
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
+// header("Access-Control-Allow-Origin: *");
+// header("Content-Type: application/json; charset=UTF-8");
 
 $db_hostname = 'localhost';
 $db_username = 'milvuk64_film';

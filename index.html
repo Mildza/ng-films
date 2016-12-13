@@ -37,7 +37,10 @@
 			  </tr>
 			  <tr ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText">
 					<td>{{ x.glumci }}</td>
-					<td calss = "ng-bind-html"> {{ genre(x.zanr) }} </td>
+					<td>{{ genre(x.zanr) }}
+				<span ng-repeat="p in val">
+				<img  src="images/p.png" alt=""></span>
+				</td>
 					<td>{{ x.naziv | uppercase }}</td>
 					<td><img ng-src="images/{{ rank(x.ocena) }}.png" alt=""></td>
 					<td>{{ x.utisak }}</td>
@@ -51,5 +54,7 @@
 	<div class="proba">
 
 	</div>
+
+
 </body>
 </html>
