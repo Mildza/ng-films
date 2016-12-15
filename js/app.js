@@ -19,24 +19,27 @@ $scope.orderByMe = function(by) {
 }
 
   $scope.genre = function(z) {
-      var niz = z.split(" ");
-      // console.log(niz);
-      var y = niz.length;
     $scope.val=[];
-      if ( y > 1 ) {
-        for (var i = 0; i < y; i++) {
-          if (niz[i] == "akcija") {
-          $scope.val.push(niz[i]);
-        } else if (niz[i] == "komedija") {
-          $scope.val.push(niz[i]);
-        } else if (niz[i] == "triler") {
-          $scope.val.push(niz[i]);
-        }
-        };
-        // console.log(val);
-        //return ($scope.val);
+    $scope.niz = z.split(" ");
+    $scope.niz = $scope.niz.filter(Boolean);
 
-      };
+  // console.log($scope.niz);
+      // var y = niz.length;
+    // $scope.val=[];
+    //   if ( y > 1 ) {
+    //     for (var i = 0; i < y; i++) {
+    //       if (niz[i] == "akcija") {
+    //       $scope.val.push(niz[i]);
+    //     } else if (niz[i] == "komedija") {
+    //       $scope.val.push(niz[i]);
+    //     } else if (niz[i] == "triler") {
+    //       $scope.val.push(niz[i]);
+    //     }
+    //     };
+    //     // console.log(val);
+        // return @scope.niz;
+
+      // };
   };
 
   $scope.rank = function(stars) {

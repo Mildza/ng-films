@@ -1,19 +1,21 @@
+body {
+  color: #337ab7; }
+
+.genre {
+  text-align: center; }
+
 th {
   text-align: center;
   font-weight: bold;
-  cursor: pointer; }
+  cursor: pointer;
+  color: #FFF;
+  background-color: #29B6F6; }
+
+table.table.table-striped tr.found td {
+  background-color: #CECBCB; }
 
 .tab {
   -webkit-transition: max-height 1s ease 0s; }
 
 .tab {
   transition: height 1s ease 0s; }
-
-.proba {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  transition: height 1s ease 0s; }
-
-.proba:hover {
-  height: 200px; }

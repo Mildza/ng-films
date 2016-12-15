@@ -23,10 +23,8 @@
 				<genre-return> </genre-return>
 			</div>
 			<div class="tab">
-
-
 			<label>Search: <input ng-model="searchText"></label>
-			<table class="table table-responsive table-bordered table-condesed table-hover table-striped ng-cloak">
+			<table class="table table-responsive table-bordered table-condesed table-hover ng-cloak">
 				<tr>
 			    <th ng-click="orderByMe('glumci')">Glumci</th>
 			    <th ng-click="orderByMe('zanr')">Zanr</th>
@@ -38,12 +36,18 @@
 			  </tr>
 			  <tr ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText">
 					<td>{{ x.glumci }}</td>
-					<td>{{ genre(x.zanr) }}
-				<span ng-repeat="p in val">
-				<img  src="images/p.png" alt=""></span>
+					<td class="genre">{{ genre(x.zanr) }}
+					<span >
+						<img  src="images/{{ niz[0] }}.png" alt="{{ niz[0] }}" class="genre">
+						<img  ng-if = "niz[1]" src="images/{{ niz[1] }}.png" alt="{{ niz[1] }}" class="genre">
+						<img  ng-if = "niz[2]" src="images/{{ niz[2] }}.png" alt="{{ niz[2] }}" class="genre">
+						<img  ng-if = "niz[3]" src="images/{{ niz[3] }}.png" alt="{{ niz[3] }}" class="genre">
+						</span>
+
+
 				</td>
-					<td>{{ x.naziv | uppercase }}</td>
-					<td><img ng-src="images/{{ rank(x.ocena) }}.png" alt=""></td>
+					<td class = "movie-name text-center"><strong>{{ x.naziv | uppercase }}</strong></td>
+					<td ><img ng-src="images/{{ rank(x.ocena) }}.png" alt=""></td>
 					<td>{{ x.utisak }}</td>
 					<td>{{ x.komentar }}</td>
 					<td>{{ x.br_komentara }}</td>
@@ -51,9 +55,6 @@
 			</table>
 			</div>
 		</div>
-	</div>
-	<div class="proba">
-
 	</div>
 
 
