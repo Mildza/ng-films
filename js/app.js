@@ -64,3 +64,10 @@ $scope.orderByMe = function(by) {
   };
 
 });
+
+app.directive("genreReturn", function() {
+  return {
+  templateUrl: 'directives/genrereturn.html',
+  replace: true
+  }
+});
