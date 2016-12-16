@@ -17,26 +17,26 @@
 <body>
 	<div  ng-controller="movies">
 		<div class="container">
-			<div class="page-header">
+			<div class="jumbotron">
 			  <h1>Mildza's Movies</h1>
 			  <p>watch, search, comment</p>
-				<genre-return> </genre-return>
+				<!-- <genre-return> </genre-return> -->
 			</div>
 			<div class="tab">
 			<label>Search: <input ng-model="searchText"></label>
-			<table class="table table-responsive table-bordered table-condesed table-hover ng-cloak">
+			<table class="table table-responsive table-bordered table-condesed table-hover table-striped ng-cloak">
 				<tr>
-			    <th ng-click="orderByMe('glumci')">Glumci</th>
+			    <th>Glumci</th>
 			    <th ng-click="orderByMe('zanr')">Zanr</th>
-			    <th ng-click="orderByMe('naziv')">Film</th>
+			    <th ng-click="orderByMe('br.komentar')">Film</th>
 					<th ng-click="orderByMe('ocena')">Ocena</th>
-					<th ng-click="orderByMe('utisak')">Utisak</th>
-					<th ng-click="orderByMe('komentar')">Komentar</th>
-					<th ng-click="orderByMe('br.komentar')">br.</th>
+					<th>Utisak</th>
+					<!-- <th ng-click="orderByMe('komentar')">Komentar</th>
+					<th ng-click="orderByMe('br.komentar')">br.</th> -->
 			  </tr>
 			  <tr ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText">
 					<td>{{ x.glumci }}</td>
-					<td class="genre">{{ genre(x.zanr) }}
+					<td class="genre" ng-cloak>{{ genre(x.zanr) }}
 					<span >
 						<img  src="images/{{ niz[0] }}.png" alt="{{ niz[0] }}" class="genre">
 						<img  ng-if = "niz[1]" src="images/{{ niz[1] }}.png" alt="{{ niz[1] }}" class="genre">
@@ -49,8 +49,8 @@
 					<td class = "movie-name text-center"><strong>{{ x.naziv | uppercase }}</strong></td>
 					<td ><img ng-src="images/{{ rank(x.ocena) }}.png" alt=""></td>
 					<td>{{ x.utisak }}</td>
-					<td>{{ x.komentar }}</td>
-					<td>{{ x.br_komentara }}</td>
+					<!-- <td>{{ x.komentar }}</td>
+					<td>{{ x.br_komentara }}</td> -->
 			  </tr>
 			</table>
 			</div>

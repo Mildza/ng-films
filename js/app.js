@@ -22,7 +22,7 @@ $scope.orderByMe = function(by) {
     $scope.val=[];
     $scope.niz = z.split(" ");
     $scope.niz = $scope.niz.filter(Boolean);
-
+    return "m";
   // console.log($scope.niz);
       // var y = niz.length;
     // $scope.val=[];

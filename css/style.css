@@ -1,18 +1,38 @@
 body {
   color: #337ab7; }
 
+  .jumbotron {
+    padding:10px;
+    background-color: #337ab7;
+    color:#FFF;
+  }
+
 .genre {
-  text-align: center; }
+  text-align: center;
+  
+ }
 
 th {
   text-align: center;
   font-weight: bold;
   cursor: pointer;
   color: #FFF;
-  background-color: #29B6F6; }
+  background-color: #FF9800; }
 
-table.table.table-striped tr.found td {
-  background-color: #CECBCB; }
+table {color:#3E2723;}
+
+.table-striped>tbody>tr:nth-child(odd)>td,tr.found{
+    background-color:#C6FF00;
+}
+
+.table-striped>tbody>tr:nth-child(even)>td,tr.found{
+    background-color:#FFEB3B;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover  {
+  background-color: #FFF;
+  color:#29B6F6;
+}
 
 .tab {
   -webkit-transition: max-height 1s ease 0s; }
