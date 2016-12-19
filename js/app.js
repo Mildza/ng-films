@@ -1,5 +1,5 @@
 
-var app = angular.module('myApp', ['ngSanitize']).config(function($sceProvider) {
+var app = angular.module('myApp', ['ngAnimate']).config(function($sceProvider) {
   // Completely disable SCE.  For demonstration purposes only!
   // Do not use in new projects.
   $sceProvider.enabled(false);
@@ -22,8 +22,7 @@ $scope.orderByMe = function(by) {
     $scope.val=[];
     $scope.niz = z.split(" ");
     $scope.niz = $scope.niz.filter(Boolean);
-    return "m";
-  // console.log($scope.niz);
+    // console.log($scope.niz);
       // var y = niz.length;
     // $scope.val=[];
     //   if ( y > 1 ) {

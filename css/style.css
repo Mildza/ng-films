@@ -1,16 +1,17 @@
 body {
   color: #337ab7; }
 
-  .jumbotron {
-    padding:10px;
-    background-color: #337ab7;
-    color:#FFF;
-  }
+.jumbotron {
+  padding: 10px;
+  background-color: #337ab7;
+  color: #FFF;
+  text-align: center; }
 
 .genre {
-  text-align: center;
-  
- }
+  text-align: center; }
+
+table {
+  color: #3E2723; }
 
 th {
   text-align: center;
@@ -19,20 +20,18 @@ th {
   color: #FFF;
   background-color: #FF9800; }
 
-table {color:#3E2723;}
+td {
+  vertical-align: middle; }
 
-.table-striped>tbody>tr:nth-child(odd)>td,tr.found{
-    background-color:#C6FF00;
-}
+.table-striped > tbody > tr:nth-child(odd) > td, tr.found {
+  background-color: #C6FF00; }
 
-.table-striped>tbody>tr:nth-child(even)>td,tr.found{
-    background-color:#FFEB3B;
-}
+.table-striped > tbody > tr:nth-child(even) > td, tr.found {
+  background-color: #FFEB3B; }
 
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover  {
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover {
   background-color: #FFF;
-  color:#29B6F6;
-}
+  color: #29B6F6; }
 
 .tab {
   -webkit-transition: max-height 1s ease 0s; }
