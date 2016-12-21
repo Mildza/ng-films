@@ -1,12 +1,7 @@
 
-var app = angular.module('myApp', ['ngAnimate']).config(function($sceProvider) {
-  // Completely disable SCE.  For demonstration purposes only!
-  // Do not use in new projects.
-  $sceProvider.enabled(false);
-});
+var app = angular.module("myApp", ['ngAnimate']);
 
-
-app.controller('movies', function($scope, $http, $sce) {
+app.controller('movies', function($scope, $http) {
     $http.get("http://mildza.freehostia.com/filmovi.php")
     .then(function (response) {$scope.filmovi = response.data.records;});
 
@@ -22,23 +17,6 @@ $scope.orderByMe = function(by) {
     $scope.val=[];
     $scope.niz = z.split(" ");
     $scope.niz = $scope.niz.filter(Boolean);
-    // console.log($scope.niz);
-      // var y = niz.length;
-    // $scope.val=[];
-    //   if ( y > 1 ) {
-    //     for (var i = 0; i < y; i++) {
-    //       if (niz[i] == "akcija") {
-    //       $scope.val.push(niz[i]);
-    //     } else if (niz[i] == "komedija") {
-    //       $scope.val.push(niz[i]);
-    //     } else if (niz[i] == "triler") {
-    //       $scope.val.push(niz[i]);
-    //     }
-    //     };
-    //     // console.log(val);
-        // return @scope.niz;
-
-      // };
   };
 
   $scope.rank = function(stars) {
@@ -62,9 +40,7 @@ $scope.orderByMe = function(by) {
       mark = "ocena0";
       return mark;
     }
-
   };
-
 });
 
 app.directive("genreReturn", function() {

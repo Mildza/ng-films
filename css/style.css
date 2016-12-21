@@ -1,40 +1,49 @@
 body {
-  color: #337ab7; }
-
-.jumbotron {
-  padding: 10px;
-  background-color: #337ab7;
-  color: #FFF;
-  text-align: center; }
+     color: #337ab7; }
 
 .genre {
-  text-align: center; }
-
-table {
-  color: #3E2723; }
+     text-align: center; }
 
 th {
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-  color: #FFF;
-  background-color: #FF9800; }
+     text-align: center;
+     font-weight: bold;
+     cursor: pointer;
+     color: #FFF;
+     background-color: #29B6F6; }
 
-td {
-  vertical-align: middle; }
+.table > tbody > tr > td {
+     vertical-align: middle; }
 
-.table-striped > tbody > tr:nth-child(odd) > td, tr.found {
-  background-color: #C6FF00; }
-
-.table-striped > tbody > tr:nth-child(even) > td, tr.found {
-  background-color: #FFEB3B; }
-
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover {
-  background-color: #FFF;
-  color: #29B6F6; }
+table.table.table-striped tr.found td {
+     background-color: #CECBCB; }
 
 .tab {
-  -webkit-transition: max-height 1s ease 0s; }
+     -webkit-transition: max-height 1s ease 0s; }
 
 .tab {
-  transition: height 1s ease 0s; }
+     transition: height 1s ease 0s; }
+
+.animate-repeat {
+     line-height: 30px;
+     list-style: none;
+     box-sizing: border-box; }
+
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter,
+.animate-repeat.ng-leave {
+     transition: all linear 0.5s; }
+
+.animate-repeat.ng-leave.ng-leave-active,
+.animate-repeat.ng-move,
+.animate-repeat.ng-enter {
+     opacity: 0;
+     max-height: 0; }
+
+.animate-repeat.ng-leave,
+.animate-repeat.ng-move.ng-move-active,
+.animate-repeat.ng-enter.ng-enter-active {
+     opacity: 1;
+     max-height: 30px; }
+
+.box-movie {
+     border: 1px solid black; }

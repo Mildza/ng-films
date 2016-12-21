@@ -24,7 +24,22 @@
 			<div >
 			<label>Search: <input ng-model="searchText"></label>
 
-			<table class="table table-responsive table-bordered table-condesed table-hover table-striped ng-cloak ">
+						<div class="row col-sm-12" ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText as results">
+							<div class="col-sm-6 box-movie">
+							  <div class="col-sm-6 ">
+									<h3 class ="movie-name text-center">{{ x.naziv | uppercase }}</h3>
+									<h5>{{ x.glumci }}</h5>
+								</div>
+							  <div class="col-sm-6">
+									<img ng-src="images/{{ rank(x.ocena) }}.png" alt="">
+									<p>{{ x.utisak }}</p>
+								</div>
+							</div>
+						</div>
+
+
+
+			<!-- <table class="table table-responsive table-bordered table-condesed table-hover table-striped ng-cloak ">
 				<tr>
 			    <th>Glumci</th>
 			    <th ng-click="orderByMe('zanr')">Zanr</th>
@@ -33,7 +48,7 @@
 					<th>Utisak</th>
 					<!-- <th ng-click="orderByMe('komentar')">Komentar</th>
 					<th ng-click="orderByMe('br.komentar')">br.</th> -->
-			  </tr>
+			  <!-- </tr>
 			  <tr class="animate-repeat" ng-repeat="x in filmovi | orderBy:by:reverse | filter:searchText as results">
 					<td>{{ x.glumci }}</td>
 					<td class="genre" ng-cloak>{{ genre(x.zanr) }}
@@ -49,11 +64,11 @@
 					<td>{{ x.utisak }}</td>
 					<!-- <td>{{ x.komentar }}</td>
 					<td>{{ x.br_komentara }}</td> -->
-					<p class="animate-repeat" ng-if="results.length === 0">
+					<!-- <p class="animate-repeat" ng-if="results.length === 0">
 					<strong>No results found...</strong>
 				</p>
 			  </tr>
-			</table>
+			</table> --> --> -->
 
 			</div>
 		</div>
